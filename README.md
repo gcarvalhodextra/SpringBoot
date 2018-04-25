@@ -1,2 +1,3 @@
 # SpringBoot
-Testing Spring Boot
+Testing Spring Boot <br/>
+Eclipse + Java 7
