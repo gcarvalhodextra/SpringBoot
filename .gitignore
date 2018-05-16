@@ -1,4 +1,1 @@
-/.metadata/
-listavip/target/
-.sonarlint/
-RemoteSystemsTempFiles/.project
+target/
