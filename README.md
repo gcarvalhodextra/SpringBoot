@@ -1,5 +1,5 @@
 # SpringBoot
 Testing Spring Boot <br/>
-IntelliJ + Java 8 <br/>
-Executar a classe /listavip/src/main/java/br/com/alura/listavip/Boot.java <br/>
-application.properties <- Acesso do banco de dados MySQL
+IntelliJ + Java 8 + Maven + MySQL<br/>
+Executar a classe Boot.java para iniciar o servidor<br/>
+application.properties <- Acesso do banco de dados
