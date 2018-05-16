@@ -22,7 +22,7 @@ public class Boot {
     String ola() {
         return "Seja bem vindo!";
     }
-	*/
+	  */
     
     // O Spring gerencia o @Bean
     /*
