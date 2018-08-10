@@ -12,4 +12,9 @@ INSERT INTO `convidado` VALUES
 (4,'Antonio da Silva','toni@alura.com.br','99997777'),
 (5,'Luis','luis@alura.com','55554444'),
 (6,'Pedro','pedro@alura.com','44555544'),
-(7,'João da Silva','springbootalura@gmail.com','98899887');
+(7,'Joï¿½o da Silva','springbootalura@gmail.com','98899887');
+
+insert into produto values (null , 'MTG005', 'Moto G6', 950);
+insert into produto values (null , 'GLT007', 'Galaxy Note', 3950);
+insert into produto values (null , 'S9U008', 'Galaxy S9', 4950);
+insert into produto values (null , 'MTP007', 'Moto G6 Plus', 1950);

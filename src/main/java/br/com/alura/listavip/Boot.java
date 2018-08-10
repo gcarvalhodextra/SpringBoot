@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Boot {
 
-    // Ele inicia no http://localhost:8080/
+    // Ele inicia no http://localhost:9000
 
     // Roda ao iniciar o servidor
     public static void main(String[] args) {

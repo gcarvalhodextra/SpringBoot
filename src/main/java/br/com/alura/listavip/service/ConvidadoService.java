@@ -11,22 +11,22 @@ import br.com.alura.listavip.repository.ConvidadoRepository;
 @Service
 public class ConvidadoService {
 
-	@Autowired
-	ConvidadoRepository repository;
+    @Autowired
+    ConvidadoRepository repository;
 
-	public void sendMail(String nome, String email) {
-		//new EmailService().send(nome, email);
-	}
+    public void sendMail(String nome, String email) {
+        //new EmailService().send(nome, email);
+    }
 
-	public Iterable<Convidado> findAll() {
-		return repository.findAll();
-	}
+    public Iterable<Convidado> findAll() {
+        return repository.findAll();
+    }
 
-	public void save(Convidado convidado) {
-		repository.save(convidado);
-	}
+    public void save(Convidado convidado) {
+        repository.save(convidado);
+    }
 
-	public List<Convidado> findByNomeOrTelefoneOrEmail(String nome, String telefone, String email) {
-		return repository.findByNomeOrTelefoneOrEmail(nome, telefone, email);
-	}
+    public List<Convidado> findByNomeOrTelefoneOrEmail(String nome, String telefone, String email) {
+        return repository.findByNomeOrTelefoneOrEmail(nome, telefone, email);
+    }
 }
