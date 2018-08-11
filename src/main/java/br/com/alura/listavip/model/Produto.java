@@ -7,45 +7,51 @@ import javax.persistence.Id;
 @Entity(name = "produto")
 public class Produto {
 
-    @Id
-    @GeneratedValue
-    private Long id;
-    private String codigo;
-    private String nome;
-    private Double valor;
+  @Id
+  @GeneratedValue
+  private Long id;
+  private String codigo;
+  private String nome;
+  private Double valor;
 
-    public Produto() {
-    }
+  public Produto() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public Produto(String codigo, String nome, Double valor) {
+    this.codigo = codigo;
+    this.nome = nome;
+    this.valor = valor;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public String getCodigo() {
-        return codigo;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
+  public String getCodigo() {
+    return codigo;
+  }
 
-    public String getNome() {
-        return nome;
-    }
+  public void setCodigo(String codigo) {
+    this.codigo = codigo;
+  }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+  public String getNome() {
+    return nome;
+  }
 
-    public Double getValor() {
-        return valor;
-    }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-    public void setValor(Double valor) {
-        this.valor = valor;
-    }
+  public Double getValor() {
+    return valor;
+  }
+
+  public void setValor(Double valor) {
+    this.valor = valor;
+  }
 }
