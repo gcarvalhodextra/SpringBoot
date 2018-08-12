@@ -19,6 +19,10 @@ public class ConvidadoService {
     }
 
     public Iterable<Convidado> findAll() {
+        Convidado convidado = repository.getByNomeLike("%us%");
+        List<Convidado> convidados = repository.findByNome("%us%");
+        convidados = repository.findByNomeLike("%us%");
+        convidados = repository.findByNacionalidade_Pais("Brasil");
         return repository.findAll();
     }
 

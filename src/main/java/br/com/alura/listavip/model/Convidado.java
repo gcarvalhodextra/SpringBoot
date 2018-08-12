@@ -3,6 +3,7 @@ package br.com.alura.listavip.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity(name = "convidado")
 public class Convidado {
@@ -13,6 +14,9 @@ public class Convidado {
 	private String nome;
 	private String email;
 	private String telefone;
+
+    @ManyToOne
+	private Nacionalidade nacionalidade;
 
 	public Convidado() {
 	}

@@ -4,14 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Boot {
+public class Start {
 
     // Ele inicia no http://localhost:9000
 
     // Roda ao iniciar o servidor
     public static void main(String[] args) {
         // Rodar a config da classe
-        SpringApplication.run(Boot.class, args);
+        SpringApplication.run(Start.class, args);
     }
 
     /*
