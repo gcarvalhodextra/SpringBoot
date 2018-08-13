@@ -1,7 +1,11 @@
 package br.com.alura.listavip.resource;
 
+import br.com.alura.listavip.dto.ProdutoDTO;
 import br.com.alura.listavip.model.Produto;
 import br.com.alura.listavip.service.ProdutoService;
+import java.util.ArrayList;
+import java.util.List;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +34,24 @@ public class ProdutoResource {
         } catch (Exception ex) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    @RequestMapping(value = "/produto/all/json", method = RequestMethod.GET)
+    public ResponseEntity findJson() {
+      try {
+        JSONObject jsonObjectResult = new JSONObject();
+        List<ProdutoDTO>  produtoDTOS = new ArrayList<>();
+
+        Iterable<Produto> result = produtoService.findAll();
+        result.forEach(p -> {
+          produtoDTOS.add(new ProdutoDTO(p));
+        });
+        jsonObjectResult.put("result", produtoDTOS);
+
+        return new ResponseEntity<>(jsonObjectResult, HttpStatus.OK);
+      } catch (Exception ex) {
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+      }
     }
 
     @RequestMapping(value = "/produto", method = RequestMethod.POST)
