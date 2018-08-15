@@ -1,15 +1,16 @@
 package br.com.alura.listavip.resource;
 
 import br.com.alura.listavip.model.Autor;
-import br.com.alura.listavip.model.Produto;
 import br.com.alura.listavip.service.AutorService;
-import br.com.alura.listavip.service.ProdutoService;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(maxAge = 3600)
 @RestController
@@ -33,7 +34,6 @@ public class AutorResource {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
 
     @RequestMapping(value = "/api/autores", method = RequestMethod.POST)
     public ResponseEntity save(@RequestBody Map<String, Object> body) {
